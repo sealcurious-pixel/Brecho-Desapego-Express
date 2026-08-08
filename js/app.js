@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="card-condition">✨ ${product.condition}</p>
           <div class="card-footer-row">
             <span class="card-price">${formattedPrice}</span>
-            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-buy-wa" title="Tenho Interesse no WhatsApp">
-              <i class="fab fa-whatsapp"></i> Tenho Interesse
+            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-buy-wa" title="Entre em contato no WhatsApp">
+              <i class="fab fa-whatsapp"></i> Entre em contato
             </a>
           </div>
         </div>
@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalDesc.textContent = product.description;
     
     modalWaBtn.href = buildWhatsAppUrl(product);
+    modalWaBtn.innerHTML = `<i class="fab fa-whatsapp"></i> Entre em contato no WhatsApp`;
     
     modalBackdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
